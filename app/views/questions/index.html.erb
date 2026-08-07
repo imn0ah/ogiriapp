@@ -1,0 +1,5 @@
+<h1>お題を選ぶ</h1>
+
+<% @categories.each do |category| %>
+  <%= link_to category, questions_show_path(category: category) %>
+<% end %>
