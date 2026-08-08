@@ -2,3 +2,7 @@
 
 <p><%= @question.content %></p>
 
+<%= form_with model: [@question, Answer.new] do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit "回答する" %>
+<% end %>
