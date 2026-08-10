@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get "answer/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
  resources :questions, only: [:index]
 
   get "questions/show", to: "questions#show"
+  get "answers", to: "answers#index"
 
   resources :questions, only: [] do
     resources :answers, only: [:create]
