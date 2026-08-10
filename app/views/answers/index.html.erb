@@ -1,0 +1,10 @@
+<h1>みんなのネタ帳</h1>
+
+<% @answers.each do |answer| %>
+  <h2>お題</h2>
+  <p><%= answer.question.content %></p>
+  
+  <h2>回答</h2>
+  <p><%= answer.content %></p>
+<% end %>
+
