@@ -1,0 +1,17 @@
+<h1>回答結果</h1>
+
+<h2>お題</h2>
+<p><%= @answer.question.content %></p>
+
+<h2>回答</h2>
+<p><%= @answer.content %></p>
+
+<%= link_to "SNSに投稿",
+            post_to_sns_path(@answer),
+            target: "_blank",
+            rel: "noopener" %>
+
+<%= link_to "みんなのネタ帳に載せる", answers_path %>
+
+<%= link_to "別のお題へ", questions_path %>
+
