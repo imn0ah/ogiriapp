@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
     end
 
     def show
-        @question = Question.where(category: params[:category]).order("RANDOM()").first
+        @question = QuestionGeneratorService.new(params[:category]).call
     end
 
 end

@@ -12,6 +12,7 @@ services:
       - db
     environment:
       RAILS_ENV: development
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
 
   db:
     image: postgres:17
