@@ -1,10 +1,23 @@
-<h1>みんなのネタ帳</h1>
+<div class="answers-index">
+  <h1 class="page-title">みんなのネタ帳</h1>
 
-<% @answers.each do |answer| %>
-  <h2>お題</h2>
-  <p><%= answer.question.content %></p>
-  
-  <h2>回答</h2>
-  <p><%= answer.content %></p>
-<% end %>
+  <div class="answers-list">
+    <% @answers.each do |answer| %>
+      <div class="answer-card">
+        <div class="answer-question">
+          <h2>お題</h2>
+          <p><%= answer.question.content %></p>
+        </div>
 
+        <div class="answer-content">
+          <h2>回答</h2>
+          <p><%= answer.content %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "カテゴリー選択に戻る",
+              questions_path,
+              class: "question-action-link" %>
+</div>

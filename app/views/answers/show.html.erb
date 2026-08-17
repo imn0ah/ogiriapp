@@ -1,17 +1,30 @@
-<h1>回答結果</h1>
+<div class="answer-show">
+  <h1 class="page-title">回答結果</h1>
 
-<h2>お題</h2>
-<p><%= @answer.question.content %></p>
+  <div class="result-card">
+    <h2>お題</h2>
+    <p><%= @answer.question.content %></p>
+  </div>
 
-<h2>回答</h2>
-<p><%= @answer.content %></p>
+  <div class="result-card">
+    <h2>回答</h2>
+    <p><%= @answer.content %></p>
+  </div>
 
-<%= link_to "SNSに投稿",
-            post_to_sns_path(@answer),
-            target: "_blank",
-            rel: "noopener" %>
+  <div class="result-actions">
+    <%= link_to "SNSに投稿",
+                post_to_sns_path(@answer),
+                target: "_blank",
+                rel: "noopener",
+                class: "result-button" %>
 
-<%= link_to "みんなのネタ帳に載せる", answers_path %>
+    <%= link_to "みんなのネタ帳に載せる",
+                answers_path,
+                class: "result-button" %>
 
-<%= link_to "別のお題へ", questions_path %>
+    <%= link_to "別のお題へ",
+                questions_path,
+                class: "result-button" %>
+  </div>
+</div>
 

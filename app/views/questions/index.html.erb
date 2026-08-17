@@ -1,5 +1,13 @@
-<h1>お題を選ぶ</h1>
+<div class="questions-index">
+  <h1 class="app-title">THE 大喜利</h1>
 
-<% @categories.each do |category| %>
-  <%= link_to category, questions_show_path(category: category) %>
-<% end %>
+  <h2>お題を選ぼう！</h2>
+
+  <p>カテゴリーを選んで大喜利に挑戦しよう</p>
+
+  <div class="category-list">
+    <% @categories.each do |category| %>
+      <%= link_to category, questions_show_path(category: category), class: "category-card" %>
+    <% end %>
+  </div>
+</div>
