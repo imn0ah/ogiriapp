@@ -38,6 +38,9 @@ class QuestionGeneratorService
     end
 
     fallback_question
+  rescue OpenAI::Errors::APIError => e
+    Rails.logger.error("OpenAI API error: #{e.message}")
+    fallback_question
   end
 
   private
