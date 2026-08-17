@@ -13,3 +13,287 @@
  *= require_tree .
  *= require_self
  */
+
+.app-title {
+  font-family: "Yuji Syuku", serif;
+  font-size: 64px;
+}
+
+.questions-index {
+  font-family: "Yuji Syuku", serif;
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background-image: url("question_index_background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.questions-index h1 {
+  margin-bottom: 16px;
+  font-size: 36px;
+}
+
+.questions-index > p {
+  margin-bottom: 40px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  display: block;
+  min-width: 160px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333333;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 15%);
+}
+
+.question-show {
+  font-family: "Yuji Syuku", serif;
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background-image: url("rakugo_background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.question-show h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+.question-card {
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+}
+
+.question-card p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.answer-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.answer-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.answer-form textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.answer-form textarea::placeholder {
+  text-align: center;
+}
+
+.answer-form input[type="submit"] {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answer-form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.answer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.answer-actions input[type="submit"],
+.back-to-categories {
+  display: inline-block;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.answer-actions input[type="submit"]:hover,
+.back-to-categories:hover {
+  opacity: 0.8;
+}
+
+.question-action-link {
+  color: #555555;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 10%;
+}
+
+.question-action-link:hover {
+  text-decoration: underline;
+}
+
+.answer-show {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.result-card {
+  padding: 30px 40px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+}
+
+.result-card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.result-card p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.result-button {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.result-button:hover {
+  opacity: 0.8;
+}
+
+.answers-index {
+ font-family: "Yuji Syuku", serif;
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+
+  background-image: url("netachou_background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.answers-index .page-title {
+  font-family: "Yuji Syuku", serif;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.answers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.answer-card {
+  padding: 30px 40px;
+  border-radius: 12px;
+  background-color: rgb(255 255 255 / 90%);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+  text-align: left;
+}
+
+.answer-question {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.answer-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.answer-card p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.answer-content p {
+  font-weight: bold;
+}
