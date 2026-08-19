@@ -1,5 +1,4 @@
 class AnswersController < ApplicationController
-  
   def index
     @answers = Answer.all
   end
@@ -37,5 +36,4 @@ class AnswersController < ApplicationController
   def answer_params
     params.require(:answer).permit(:content)
   end
-
 end

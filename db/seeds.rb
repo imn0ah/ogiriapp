@@ -60,10 +60,9 @@ questions = [
     {
         category: "学校",
         content: "2100年、必須教科に加えられた新たな教科は？"
-    },
+    }
 ]
 
 questions.each do |question|
     Question.find_or_create_by!(question)
 end
-
